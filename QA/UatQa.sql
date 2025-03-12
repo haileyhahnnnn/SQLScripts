@@ -4,18 +4,20 @@ FROM 'dataset.table.name'
 Where FieldNameHere is not null 
 LIMIT 100; -- change limit as needed 
 
--- Drop a view in GCP && then create new one
+
+-- DROP A VIEW IN GCP IF IT ALREADY EXSISTS && THEN CREATE A NEW ONE 
 Drop View if Exsists viewDataSetName.ViewName;
 
 Create view viewDataSetName.ViewName as 
 (SELECT * FROM 'DataSet.View.Name' LIMIT 1000)
+  
 
--- Count total rows in a table from the dataloads  
+-- COUNT TOTAL ROWS IN A TABLE FROM THE DATALOADS 
 SELECT COUNT(*) AS total_rows
 From 'DataSet.Table.Name';
 
 
--- Select count deduplication -- removing duplicated values and then performing count 
+-- SELECT COUNT DEDUPLICATION -- REMOVING DUPLICATED VALUES && THEN PERFORMING COUNT 
 Select Count (*)
 From (
   Select Distinct *
@@ -30,3 +32,5 @@ From (
   From 'DataSet.Table.Name'
   Order by FieldNameHere ASC
   )a
+
+

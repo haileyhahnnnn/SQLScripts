@@ -32,5 +32,14 @@ From (
   From 'DataSet.Table.Name'
   Order by FieldNameHere ASC
   )a
+  
 
+-- CALC NULLS VALUES RETURNED WITHIN A DATASET 
+-- add as many fieldNames as needed
+Select 
+  count(*) as row_count , 
+  sum(case when fieldName is null then 1 else 0 end) as fieldName_count ,
+  sum(case when fieldName2 is null then 1 else 0 end) as fieldName2_count
+From 
+          'DataSet.Table.Name'
 

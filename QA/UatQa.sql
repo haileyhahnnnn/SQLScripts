@@ -43,3 +43,6 @@ Select
 From 
           'DataSet.Table.Name'
 
+
+-- GRABBING MIN AND MAX DATES FROM DATE FIELDS 
+

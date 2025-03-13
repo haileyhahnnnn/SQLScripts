@@ -45,4 +45,5 @@ From
 
 
 -- GRABBING MIN AND MAX DATES FROM DATE FIELDS 
-
+select max(month_field_here) as max_date, min(month_field_here) as min_date from 
+'DataSet.Table.Name'

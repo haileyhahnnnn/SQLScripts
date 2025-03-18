@@ -1,3 +1,7 @@
+-- ROW COUNT ON VALUES IN BIGQUERY DATASET 
+Select count(*) as row_count
+    FROM 'dataset.table.view'
+
 -- REMOVE NULLS FROM SPECIFIC FIELDS RESULTS DATASET  
 SELECT * 
 FROM 'dataset.table.name' 
